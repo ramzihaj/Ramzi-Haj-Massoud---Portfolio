@@ -1,6 +1,12 @@
 import React from 'react';
 import ReviewCard from './ReviewCard';
 
+import { gsap } from "gsap"; 
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from '@gsap/react';
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
+
 const reviews = [
   {
     content: 'Exceptional web development! Delivered a seamless, responsive site with clean code and great UX.',
@@ -41,16 +47,30 @@ const reviews = [
 ];
 
 const Review = () => {
+
+  useGSAP(() => {
+    gsap.to('.scrub-slide', {
+      scrollTrigger: {
+        trigger: '.scrub-slide',
+        start: '-200% 80%',
+        end: '400% 80%',
+        scrub: true
+
+      },
+      x:'-1000'
+    })
+  });
+
   return (
     <section
       id="reviews"
       className="section overflow-hidden"
     >
       <div className="container">
-        <h2 className="headline-2 mb-8"> {/* Using headline-2, assuming CSS fix */}
+        <h2 className="headline-2 mb-8 reveal-up"> {/* Using headline-2, assuming CSS fix */}
           What our customers say
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="scrub-slide flex items-stretch gap-3 w-fit">
           {reviews.map(({ content, name, imgSrc, company }, key) => (
             <ReviewCard
               key={key}
