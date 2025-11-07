@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Sphere, Cylinder, Box } from '@react-three/drei';
 
-// Cartoon-style Avatar (South Park inspired)
+// Personalized 3D Avatar - Ramzi
 function Avatar() {
   const avatarRef = useRef();
   
@@ -18,96 +18,159 @@ function Avatar() {
   });
 
   return (
-    <group ref={avatarRef} position={[0, 0, 0]} scale={1.2}>
-      {/* Head - Big round cartoon head */}
-      <Sphere args={[1.2, 32, 32]} position={[0, 1.8, 0]}>
-        <meshToonMaterial
-          color="#ffd4a3"
+    <group ref={avatarRef} position={[0, 0, 0]} scale={1.1}>
+      {/* Head - More realistic proportions with medium skin tone */}
+      <Sphere args={[1, 32, 32]} position={[0, 1.8, 0]}>
+        <meshStandardMaterial
+          color="#c4956c"
+          roughness={0.8}
+          metalness={0.1}
         />
       </Sphere>
       
-      {/* Hair/Cap */}
-      <Sphere args={[1.25, 32, 16, 0, Math.PI * 2, 0, Math.PI / 2]} position={[0, 2.5, 0]}>
-        <meshToonMaterial color="#8B4513" />
+      {/* Short hair - Black/dark brown */}
+      <Sphere args={[1.02, 32, 16, 0, Math.PI * 2, 0, Math.PI / 2]} position={[0, 2.2, 0]}>
+        <meshStandardMaterial color="#1a1a1a" roughness={0.9} />
       </Sphere>
+      {/* Hair sides */}
+      <Box args={[2.1, 0.4, 1.2]} position={[0, 2.05, 0]}>
+        <meshStandardMaterial color="#1a1a1a" roughness={0.9} />
+      </Box>
       
-      {/* Eyes - Big cartoon eyes with white background */}
-      <group position={[0, 2, 0.9]}>
+      {/* Eyes - Realistic with green/hazel iris */}
+      <group position={[0, 1.95, 0.85]}>
         {/* Left eye white */}
-        <Sphere args={[0.25, 16, 16]} position={[-0.35, 0, 0]}>
-          <meshToonMaterial color="#ffffff" />
+        <Sphere args={[0.15, 16, 16]} position={[-0.3, 0, 0]}>
+          <meshStandardMaterial color="#ffffff" />
+        </Sphere>
+        {/* Left iris - green/hazel */}
+        <Sphere args={[0.09, 16, 16]} position={[-0.3, 0, 0.14]}>
+          <meshStandardMaterial color="#6b8e23" />
         </Sphere>
         {/* Left pupil */}
-        <Sphere args={[0.12, 16, 16]} position={[-0.35, 0, 0.23]}>
-          <meshToonMaterial color="#000000" />
+        <Sphere args={[0.05, 16, 16]} position={[-0.3, 0, 0.19]}>
+          <meshStandardMaterial color="#000000" />
         </Sphere>
         
         {/* Right eye white */}
-        <Sphere args={[0.25, 16, 16]} position={[0.35, 0, 0]}>
-          <meshToonMaterial color="#ffffff" />
+        <Sphere args={[0.15, 16, 16]} position={[0.3, 0, 0]}>
+          <meshStandardMaterial color="#ffffff" />
+        </Sphere>
+        {/* Right iris - green/hazel */}
+        <Sphere args={[0.09, 16, 16]} position={[0.3, 0, 0.14]}>
+          <meshStandardMaterial color="#6b8e23" />
         </Sphere>
         {/* Right pupil */}
-        <Sphere args={[0.12, 16, 16]} position={[0.35, 0, 0.23]}>
-          <meshToonMaterial color="#000000" />
+        <Sphere args={[0.05, 16, 16]} position={[0.3, 0, 0.19]}>
+          <meshStandardMaterial color="#000000" />
         </Sphere>
       </group>
       
-      {/* Big cartoon smile */}
-      <Box args={[0.6, 0.08, 0.08]} position={[0, 1.3, 1.1]} rotation={[0, 0, 0.1]}>
-        <meshToonMaterial color="#000000" />
+      {/* Eyebrows - Dark */}
+      <Box args={[0.35, 0.08, 0.05]} position={[-0.3, 2.15, 0.95]}>
+        <meshStandardMaterial color="#1a1a1a" />
+      </Box>
+      <Box args={[0.35, 0.08, 0.05]} position={[0.3, 2.15, 0.95]}>
+        <meshStandardMaterial color="#1a1a1a" />
       </Box>
       
-      {/* Body - Simple rectangular body */}
-      <Box args={[1.8, 2.2, 1]} position={[0, -0.3, 0]}>
-        <meshToonMaterial
-          color="#e74c3c"
+      {/* Beard and goatee */}
+      <group>
+        {/* Chin beard */}
+        <Sphere args={[0.35, 16, 16, 0, Math.PI * 2, Math.PI / 2, Math.PI]} position={[0, 1.2, 0.8]}>
+          <meshStandardMaterial color="#2c2c2c" roughness={0.9} />
+        </Sphere>
+        {/* Jaw line beard */}
+        <Box args={[1.4, 0.5, 0.3]} position={[0, 1.45, 0.75]}>
+          <meshStandardMaterial color="#2c2c2c" roughness={0.9} />
+        </Box>
+        {/* Mustache */}
+        <Box args={[0.5, 0.15, 0.15]} position={[0, 1.65, 0.95]}>
+          <meshStandardMaterial color="#2c2c2c" roughness={0.9} />
+        </Box>
+      </group>
+      
+      {/* Nose */}
+      <Box args={[0.15, 0.25, 0.2]} position={[0, 1.75, 1.0]}>
+        <meshStandardMaterial color="#b8876b" roughness={0.8} />
+      </Box>
+      
+      {/* Neck */}
+      <Cylinder args={[0.35, 0.4, 0.5]} position={[0, 1.05, 0]}>
+        <meshStandardMaterial color="#c4956c" roughness={0.8} />
+      </Cylinder>
+      
+      {/* Body - Black t-shirt with ROB TECH logo */}
+      <Box args={[1.6, 2, 0.9]} position={[0, -0.2, 0]}>
+        <meshStandardMaterial
+          color="#0a0a0a"
+          roughness={0.7}
         />
       </Box>
       
-      {/* Arms - Simple cylinders */}
-      <Cylinder args={[0.25, 0.25, 1.8]} position={[-1.1, -0.2, 0]} rotation={[0, 0, Math.PI / 4]}>
-        <meshToonMaterial color="#e74c3c" />
-      </Cylinder>
-      <Box args={[0.35, 0.35, 0.35]} position={[-1.8, -0.8, 0]}>
-        <meshToonMaterial color="#ffd4a3" />
-      </Box>
-      
-      <Cylinder args={[0.25, 0.25, 1.8]} position={[1.1, -0.2, 0]} rotation={[0, 0, -Math.PI / 4]}>
-        <meshToonMaterial color="#e74c3c" />
-      </Cylinder>
-      <Box args={[0.35, 0.35, 0.35]} position={[1.8, -0.8, 0]}>
-        <meshToonMaterial color="#ffd4a3" />
-      </Box>
-      
-      {/* Legs - Short cartoon legs */}
-      <Cylinder args={[0.3, 0.3, 1.2]} position={[-0.5, -2, 0]}>
-        <meshToonMaterial color="#3498db" />
-      </Cylinder>
-      <Box args={[0.45, 0.25, 0.6]} position={[-0.5, -2.7, 0.2]}>
-        <meshToonMaterial color="#2c3e50" />
-      </Box>
-      
-      <Cylinder args={[0.3, 0.3, 1.2]} position={[0.5, -2, 0]}>
-        <meshToonMaterial color="#3498db" />
-      </Cylinder>
-      <Box args={[0.45, 0.25, 0.6]} position={[0.5, -2.7, 0.2]}>
-        <meshToonMaterial color="#2c3e50" />
-      </Box>
-      
-      {/* Laptop on lap */}
-      <group position={[0, -0.8, 0.7]} rotation={[-0.2, 0, 0]}>
-        <Box args={[1.2, 0.08, 0.8]}>
-          <meshToonMaterial color="#34495e" />
-        </Box>
-        <Box args={[1.2, 0.9, 0.08]} position={[0, 0.45, -0.4]} rotation={[-0.15, 0, 0]}>
-          <meshToonMaterial color="#2c3e50" />
-        </Box>
-        {/* Screen with code */}
-        <Box args={[1.1, 0.8, 0.02]} position={[0, 0.45, -0.35]} rotation={[-0.15, 0, 0]}>
-          <meshToonMaterial 
-            color="#1a1a1a" 
-            emissive="#38bdf8"
+      {/* ROB TECH Logo on chest */}
+      <group position={[0, 0.3, 0.5]}>
+        {/* Logo text representation */}
+        <Box args={[0.8, 0.15, 0.02]} position={[0, 0.1, 0]}>
+          <meshStandardMaterial 
+            color="#3b82f6" 
+            emissive="#3b82f6"
             emissiveIntensity={0.3}
+          />
+        </Box>
+        <Box args={[0.8, 0.15, 0.02]} position={[0, -0.1, 0]}>
+          <meshStandardMaterial 
+            color="#ffffff" 
+            emissive="#ffffff"
+            emissiveIntensity={0.2}
+          />
+        </Box>
+      </group>
+      
+      {/* Arms - Medium skin tone */}
+      <Cylinder args={[0.22, 0.22, 1.6]} position={[-1, -0.1, 0]} rotation={[0, 0, Math.PI / 5]}>
+        <meshStandardMaterial color="#c4956c" roughness={0.8} />
+      </Cylinder>
+      <Sphere args={[0.25, 16, 16]} position={[-1.65, -0.75, 0]}>
+        <meshStandardMaterial color="#c4956c" roughness={0.8} />
+      </Sphere>
+      
+      <Cylinder args={[0.22, 0.22, 1.6]} position={[1, -0.1, 0]} rotation={[0, 0, -Math.PI / 5]}>
+        <meshStandardMaterial color="#c4956c" roughness={0.8} />
+      </Cylinder>
+      <Sphere args={[0.25, 16, 16]} position={[1.65, -0.75, 0]}>
+        <meshStandardMaterial color="#c4956c" roughness={0.8} />
+      </Sphere>
+      
+      {/* Legs - Black pants */}
+      <Cylinder args={[0.28, 0.28, 1.4]} position={[-0.45, -1.95, 0]}>
+        <meshStandardMaterial color="#1a1a1a" roughness={0.6} />
+      </Cylinder>
+      <Box args={[0.4, 0.2, 0.55]} position={[-0.45, -2.75, 0.15]}>
+        <meshStandardMaterial color="#2c2c2c" roughness={0.7} />
+      </Box>
+      
+      <Cylinder args={[0.28, 0.28, 1.4]} position={[0.45, -1.95, 0]}>
+        <meshStandardMaterial color="#1a1a1a" roughness={0.6} />
+      </Cylinder>
+      <Box args={[0.4, 0.2, 0.55]} position={[0.45, -2.75, 0.15]}>
+        <meshStandardMaterial color="#2c2c2c" roughness={0.7} />
+      </Box>
+      
+      {/* Laptop */}
+      <group position={[0, -0.7, 0.6]} rotation={[-0.3, 0, 0]}>
+        <Box args={[1.1, 0.06, 0.75]}>
+          <meshStandardMaterial color="#34495e" metalness={0.7} roughness={0.3} />
+        </Box>
+        <Box args={[1.1, 0.85, 0.06]} position={[0, 0.42, -0.38]} rotation={[-0.2, 0, 0]}>
+          <meshStandardMaterial color="#2c3e50" metalness={0.6} roughness={0.4} />
+        </Box>
+        {/* Screen with code - blue glow */}
+        <Box args={[1.0, 0.75, 0.02]} position={[0, 0.42, -0.33]} rotation={[-0.2, 0, 0]}>
+          <meshStandardMaterial 
+            color="#0f172a" 
+            emissive="#3b82f6"
+            emissiveIntensity={0.4}
           />
         </Box>
       </group>
