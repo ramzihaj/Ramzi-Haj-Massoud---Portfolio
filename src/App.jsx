@@ -13,6 +13,8 @@ import Hero from "./components/Hero";
 import Review from "./components/Review";
 import Skill from "./components/Skill";
 import Work from "./components/Work";
+import GridBackground from "./components/GridBackground";
+import CustomCursor from "./components/CustomCursor";
 
 const App = () => {
 
@@ -36,8 +38,9 @@ const App = () => {
   });
 
   return (
-    
-      <ReactLenis root>
+    <ReactLenis root>
+      <CustomCursor />
+      <GridBackground />
       <Header />
       <main>
         <Hero />

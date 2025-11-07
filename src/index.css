@@ -6,7 +6,28 @@ html {
 
 body {
   @apply bg-zinc-900 text-zinc-50;
+  perspective: 1000px;
+  cursor: none;
 }
+
+/* Show default cursor for inputs and textareas */
+input, textarea, select {
+  cursor: auto;
+}
+
+/* 3D Transform utilities */
+.transform-3d {
+  transform-style: preserve-3d;
+}
+
+/* Glassmorphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 .headline-1 {
     @apply max-w-max;
     background: -webkit-linear-gradient(0deg,#fafafa,#a1a1aa);

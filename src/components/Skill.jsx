@@ -3,52 +3,55 @@ import SkillCard from './SkillCard';
 
 const skillItem = [
   {
-    imgSrc: '/images/figma.svg',
-    label: 'Figma',
-    desc: 'Design tool'
+    imgSrc: '/images/javascript.svg',
+    label: 'Java',
+    desc: 'Backend Language'
   },
   {
-    imgSrc: '/images/css3.svg',
-    label: 'CSS',
-    desc: 'User Interface'
+    imgSrc: '/images/react.svg',
+    label: 'Spring Boot',
+    desc: 'Java Framework'
+  },
+  {
+    imgSrc: '/images/react.svg',
+    label: 'Angular',
+    desc: 'Frontend Framework'
   },
   {
     imgSrc: '/images/javascript.svg',
     label: 'JavaScript',
-    desc: 'Interaction'
-  },
-  {
-    imgSrc: '/images/nodejs.svg',
-    label: 'NodeJS',
-    desc: 'Web Server'
-  },
-  {
-    imgSrc: '/images/expressjs.svg',
-    label: 'ExpressJS',
-    desc: 'Node Framework'
+    desc: 'Programming'
   },
   {
     imgSrc: '/images/mongodb.svg',
-    label: 'MongoDB',
-    desc: 'Database'
+    label: 'Docker',
+    desc: 'Containerization'
   },
   {
-    imgSrc: '/images/react.svg',
-    label: 'React',
-    desc: 'Framework'
+    imgSrc: '/images/nodejs.svg',
+    label: 'Kubernetes',
+    desc: 'Orchestration'
   },
   {
-    imgSrc: '/images/tailwindcss.svg',
-    label: 'TailwindCSS',
-    desc: 'User Interface'
+    imgSrc: '/images/figma.svg',
+    label: 'CI/CD',
+    desc: 'Git Actions'
+  },
+  {
+    imgSrc: '/images/mongodb.svg',
+    label: 'DevOps',
+    desc: 'Automation'
   },
 ];
 
 const Skill = () => {
   return (
-      <section className="section">
-          <div className="container">
-              <h2 className="headline-2 reveal-up">
+      <section className="section relative overflow-hidden">
+          {/* Background gradient effects */}
+          <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '0.5s' }} />
+          
+          <div className="container relative z-10">
+              <h2 className="headline-2 reveal-up bg-gradient-to-r from-zinc-50 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                   Essential Tools I use
               </h2>
               <p className="text-zinc-400 mt-3 mb-8 max-w-[50ch] reveal-up">
