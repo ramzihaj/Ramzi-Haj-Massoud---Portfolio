@@ -1,7 +1,6 @@
 import React from "react";
 import { ButtonPrimary, ButtonOutline } from "./Button";
 import SpaceScene from "./SpaceScene";
-import Avatar3D from "./Avatar3D";
 
 const Hero = () => {
   return (
@@ -37,20 +36,61 @@ const Hero = () => {
             Building Scalable Modern Websites for the Future
           </h2>
           <div className="flex items-center gap-3">
-            <ButtonPrimary label="Download CV" icon="download" />
+            <ButtonPrimary 
+              label="Download CV" 
+              icon="download"
+              href="/cv/Ramzi_Haj_Massoud_CV.pdf"
+              download
+            />
             <ButtonOutline
               href="#about"
               label="Scroll down"
               icon="arrow_downward"
             />
           </div>
+          <p className="text-zinc-500 text-sm mt-3">
+            📄 Place your CV file in <code className="text-sky-400">/public/cv/Ramzi_Haj_Massoud_CV.pdf</code>
+          </p>
         </div>
         <div className="hidden lg:block relative reveal-up">
-          <div className="w-full max-w-[480px] h-[600px] ml-auto relative">
-            {/* 3D Avatar */}
-            <div className="absolute inset-0">
-              <Avatar3D />
-            </div>
+          <div className="w-full max-w-[500px] ml-auto relative">
+            {/* Professional Photo */}
+            <figure className="relative group">
+              {/* Glowing border effect */}
+              <div className="absolute -inset-1 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-3xl blur-2xl opacity-50 group-hover:opacity-75 transition duration-500 animate-pulse"></div>
+              
+              {/* Image container */}
+              <div className="relative rounded-3xl overflow-hidden border-4 border-zinc-800/50 backdrop-blur-sm bg-gradient-to-br from-zinc-800/30 to-zinc-900/30">
+                <img
+                  src="/images/ramzi-professional.jpg"
+                  alt="Ramzi Haj Massoud - Full Stack Developer"
+                  className="w-full h-auto object-cover transform transition-transform duration-500 group-hover:scale-105"
+                />
+                
+                {/* Overlay gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-indigo-900/40 via-transparent to-purple-900/20 pointer-events-none"></div>
+                
+                {/* Tech badge overlay */}
+                <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between backdrop-blur-md bg-zinc-900/70 rounded-2xl p-4 border border-sky-400/30">
+                  <div>
+                    <p className="text-sky-400 font-semibold text-sm">Full Stack Developer</p>
+                    <p className="text-zinc-300 text-xs mt-1">Java • Spring Boot • Angular</p>
+                  </div>
+                  <div className="flex gap-2">
+                    <span className="w-3 h-3 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span className="text-emerald-400 text-xs font-medium">Available</span>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Floating code elements */}
+              <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-sky-400 to-blue-600 rounded-2xl rotate-12 flex items-center justify-center text-white font-bold text-xl shadow-2xl animate-bounce">
+                &lt;/&gt;
+              </div>
+              <div className="absolute -bottom-4 -left-4 w-14 h-14 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl -rotate-12 flex items-center justify-center text-white font-bold shadow-2xl" style={{ animationDelay: '0.5s' }}>
+                { }
+              </div>
+            </figure>
           </div>
         </div>
       </div>
