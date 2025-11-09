@@ -48,9 +48,6 @@ const Hero = () => {
               icon="arrow_downward"
             />
           </div>
-          <p className="text-zinc-500 text-sm mt-3">
-            📄 Place your CV file in <code className="text-sky-400">/public/cv/Ramzi_Haj_Massoud_CV.pdf</code>
-          </p>
         </div>
         <div className="hidden lg:block relative reveal-up">
           <div className="w-full max-w-[500px] ml-auto relative">
@@ -62,13 +59,19 @@ const Hero = () => {
               {/* Image container */}
               <div className="relative rounded-3xl overflow-hidden border-4 border-zinc-800/50 backdrop-blur-sm bg-gradient-to-br from-zinc-800/30 to-zinc-900/30">
                 <img
-                  src="/images/ramzi-professional.jpg"
+                  src="/images/ramzi2.png"
                   alt="Ramzi Haj Massoud - Full Stack Developer"
                   className="w-full h-auto object-cover transform transition-transform duration-500 group-hover:scale-105"
+                  style={{
+                    filter: 'brightness(1.1) contrast(1.15) saturate(1.2)',
+                    mixBlendMode: 'luminosity',
+                    opacity: 0.95
+                  }}
                 />
                 
-                {/* Overlay gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-indigo-900/40 via-transparent to-purple-900/20 pointer-events-none"></div>
+                {/* Overlay gradient - hero banner style */}
+                <div className="absolute inset-0 bg-gradient-to-t from-sky-900/60 via-sky-700/20 to-transparent pointer-events-none"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-sky-400/10 to-purple-600/30 pointer-events-none"></div>
                 
                 {/* Tech badge overlay */}
                 <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between backdrop-blur-md bg-zinc-900/70 rounded-2xl p-4 border border-sky-400/30">
