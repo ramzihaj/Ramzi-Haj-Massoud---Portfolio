@@ -59,7 +59,7 @@ const Hero = () => {
               {/* Image container */}
               <div className="relative rounded-full overflow-hidden border-4 border-zinc-800/50 backdrop-blur-sm bg-gradient-to-br from-zinc-800/30 to-zinc-900/30 aspect-square">
                 <img
-                  src="/images/ramzi2.png"
+                  src="/images/ramzi2111.png"
                   alt="Ramzi Haj Massoud - Full Stack Developer"
                   className="w-full h-full object-cover object-center transform transition-transform duration-500 group-hover:scale-110"
                   style={{
