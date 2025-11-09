@@ -50,18 +50,18 @@ const Hero = () => {
           </div>
         </div>
         <div className="hidden lg:block relative reveal-up">
-          <div className="w-full max-w-[500px] ml-auto relative">
+          <div className="w-full max-w-[380px] ml-auto relative">
             {/* Professional Photo */}
             <figure className="relative group">
               {/* Glowing border effect */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-3xl blur-2xl opacity-50 group-hover:opacity-75 transition duration-500 animate-pulse"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-full blur-2xl opacity-50 group-hover:opacity-75 transition duration-500 animate-pulse"></div>
               
               {/* Image container */}
-              <div className="relative rounded-3xl overflow-hidden border-4 border-zinc-800/50 backdrop-blur-sm bg-gradient-to-br from-zinc-800/30 to-zinc-900/30">
+              <div className="relative rounded-full overflow-hidden border-4 border-zinc-800/50 backdrop-blur-sm bg-gradient-to-br from-zinc-800/30 to-zinc-900/30 aspect-square">
                 <img
                   src="/images/ramzi2.png"
                   alt="Ramzi Haj Massoud - Full Stack Developer"
-                  className="w-full h-auto object-cover transform transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-cover object-center transform transition-transform duration-500 group-hover:scale-110"
                   style={{
                     filter: 'brightness(1.1) contrast(1.15) saturate(1.2)',
                     mixBlendMode: 'luminosity',
@@ -73,16 +73,10 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-sky-900/60 via-sky-700/20 to-transparent pointer-events-none"></div>
                 <div className="absolute inset-0 bg-gradient-to-br from-transparent via-sky-400/10 to-purple-600/30 pointer-events-none"></div>
                 
-                {/* Tech badge overlay */}
-                <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between backdrop-blur-md bg-zinc-900/70 rounded-2xl p-4 border border-sky-400/30">
-                  <div>
-                    <p className="text-sky-400 font-semibold text-sm">Full Stack Developer</p>
-                    <p className="text-zinc-300 text-xs mt-1">Java • Spring Boot • Angular</p>
-                  </div>
-                  <div className="flex gap-2">
-                    <span className="w-3 h-3 rounded-full bg-emerald-400 animate-pulse"></span>
-                    <span className="text-emerald-400 text-xs font-medium">Available</span>
-                  </div>
+                {/* Tech badge overlay - centered at bottom */}
+                <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 backdrop-blur-md bg-zinc-900/80 rounded-full px-4 py-2 border border-sky-400/40 flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                  <span className="text-sky-400 font-semibold text-xs whitespace-nowrap">Full Stack Developer</span>
                 </div>
               </div>
               
@@ -94,6 +88,16 @@ const Hero = () => {
                 { }
               </div>
             </figure>
+            
+            {/* Tech stack below photo */}
+            <div className="mt-6 text-center backdrop-blur-sm bg-zinc-900/40 rounded-2xl p-3 border border-zinc-700/50">
+              <p className="text-zinc-400 text-xs mb-2">Tech Stack</p>
+              <div className="flex items-center justify-center gap-2 flex-wrap">
+                <span className="px-3 py-1 bg-sky-500/20 text-sky-400 rounded-full text-xs font-medium border border-sky-500/30">Java</span>
+                <span className="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-xs font-medium border border-green-500/30">Spring Boot</span>
+                <span className="px-3 py-1 bg-red-500/20 text-red-400 rounded-full text-xs font-medium border border-red-500/30">Angular</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
