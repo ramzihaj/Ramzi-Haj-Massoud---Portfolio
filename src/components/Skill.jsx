@@ -3,42 +3,42 @@ import SkillCard from './SkillCard';
 
 const skillItem = [
   {
-    imgSrc: '/images/javascript.svg',
+    imgSrc: 'images/javascript.svg',
     label: 'Java',
     desc: 'Backend Language'
   },
   {
-    imgSrc: '/images/react.svg',
+    imgSrc: 'images/react.svg',
     label: 'Spring Boot',
     desc: 'Java Framework'
   },
   {
-    imgSrc: '/images/react.svg',
+    imgSrc: 'images/react.svg',
     label: 'Angular',
     desc: 'Frontend Framework'
   },
   {
-    imgSrc: '/images/javascript.svg',
+    imgSrc: 'images/javascript.svg',
     label: 'JavaScript',
     desc: 'Programming'
   },
   {
-    imgSrc: '/images/mongodb.svg',
+    imgSrc: 'images/mongodb.svg',
     label: 'Docker',
     desc: 'Containerization'
   },
   {
-    imgSrc: '/images/nodejs.svg',
+    imgSrc: 'images/nodejs.svg',
     label: 'Kubernetes',
     desc: 'Orchestration'
   },
   {
-    imgSrc: '/images/figma.svg',
+    imgSrc: 'images/figma.svg',
     label: 'CI/CD',
     desc: 'Git Actions'
   },
   {
-    imgSrc: '/images/mongodb.svg',
+    imgSrc: 'images/mongodb.svg',
     label: 'DevOps',
     desc: 'Automation'
   },
