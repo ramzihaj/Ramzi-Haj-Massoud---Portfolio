@@ -3,25 +3,25 @@ import ProjectCard from "./ProjectCard";
 
 const works = [
   {
-    imgSrc: "/images/project-1.jpg",
+    imgSrc: "images/project-1.jpg",
     title: "License Plate Detection System",
     tags: ["AI", "Computer Vision", "Real-time"],
     projectLink: "#",
   },
   {
-    imgSrc: "/images/project-2.jpg",
+    imgSrc: "images/project-2.jpg",
     title: "IT-Learning Platform",
     tags: ["Full Stack", "AI", "Education"],
     projectLink: "#",
   },
   {
-    imgSrc: "/images/project-3.jpg",
+    imgSrc: "images/project-3.jpg",
     title: "Modern Cafe Management System",
     tags: ["Spring Boot", "Angular", "Management"],
     projectLink: "#",
   },
   {
-    imgSrc: "/images/project-4.jpg",
+    imgSrc: "images/project-4.jpg",
     title: "Furniture E-commerce Tunisia",
     tags: ["E-commerce", "Full Stack", "Angular"],
     projectLink: "#",

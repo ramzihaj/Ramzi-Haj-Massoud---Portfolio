@@ -18,7 +18,7 @@ const Hero = () => {
           <div className="flex items-center gap-3">
             <figure className="img-box w-9 h-9 rounded-lg ring-2 ring-sky-400/50">
               <img
-                src="/images/avatar-1.jpg"
+                src="images/avatar-1.jpg"
                 width={40}
                 height={40}
                 alt="Ramzi haj massoud Portrait"
@@ -39,7 +39,7 @@ const Hero = () => {
             <ButtonPrimary 
               label="Download CV" 
               icon="download"
-              href="/cv/Ramzi_Haj_Massoud_CV.pdf"
+              href="cv/Ramzi_Haj_Massoud_CV.pdf"
               download
             />
             <ButtonOutline
@@ -59,7 +59,7 @@ const Hero = () => {
               {/* Image container */}
               <div className="relative rounded-full overflow-hidden border-4 border-zinc-800/50 backdrop-blur-sm bg-gradient-to-br from-zinc-800/30 to-zinc-900/30 aspect-square">
                 <img
-                  src="/images/ramzi2111.png"
+                  src="images/ramzi2111.png"
                   alt="Ramzi Haj Massoud - Full Stack Developer"
                   className="w-full h-full object-cover object-center transform transition-transform duration-500 group-hover:scale-110"
                   style={{
