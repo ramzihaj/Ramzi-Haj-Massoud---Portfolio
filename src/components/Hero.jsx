@@ -32,20 +32,31 @@ const Hero = () => {
               Available for work
             </div>
           </div>
-          <h2 className="headline-1 max-w-[15ch] sm:max-w-[20ch] lg:max-w-[15] mt-5 mb-8 lg:mb-10 drop-shadow-2xl">
-            Building Scalable Modern Websites for the Future
+          <h2 className="headline-1 max-w-[18ch] sm:max-w-[24ch] lg:max-w-[20] mt-5 mb-4 lg:mb-6 drop-shadow-2xl">
+            DevOps Engineer
           </h2>
+          <p className="text-zinc-300 max-w-[40ch] mb-3 text-sm sm:text-base">
+            I bring infrastructure, automation and deployment together to turn ideas into robust, scalable and reliable systems.
+          </p>
+          <div className="grid gap-3 mb-6 text-xs sm:text-sm">
+            <div>
+              <p className="text-zinc-300 font-medium mb-1">DevOps & Infrastructure</p>
+              <p className="text-zinc-400">
+                Git, GitHub, GitLab, Docker, Docker Compose, Jenkins, Kubernetes and Azure Cloud.
+              </p>
+            </div>
+          </div>
+
           <div className="flex items-center gap-3">
             <ButtonPrimary 
-              label="Download CV" 
-              icon="download"
-              href="cv/Ramzi_Haj_Massoud_CV.pdf"
-              download
+              label="View my Projects" 
+              icon="arrow_forward"
+              href="#work"
             />
             <ButtonOutline
-              href="#about"
-              label="Scroll down"
-              icon="arrow_downward"
+              href="#contact"
+              label="Contact Me"
+              icon="mail"
             />
           </div>
         </div>
@@ -76,7 +87,7 @@ const Hero = () => {
                 {/* Tech badge overlay - centered at bottom */}
                 <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 backdrop-blur-md bg-zinc-900/80 rounded-full px-4 py-2 border border-sky-400/40 flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                  <span className="text-sky-400 font-semibold text-xs whitespace-nowrap">Full Stack Developer</span>
+                  <span className="text-sky-400 font-semibold text-xs whitespace-nowrap">DevOps Engineer</span>
                 </div>
               </div>
               
@@ -93,9 +104,10 @@ const Hero = () => {
             <div className="mt-6 text-center backdrop-blur-sm bg-zinc-900/40 rounded-2xl p-3 border border-zinc-700/50">
               <p className="text-zinc-400 text-xs mb-2">Tech Stack</p>
               <div className="flex items-center justify-center gap-2 flex-wrap">
-                <span className="px-3 py-1 bg-sky-500/20 text-sky-400 rounded-full text-xs font-medium border border-sky-500/30">Java</span>
-                <span className="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-xs font-medium border border-green-500/30">Spring Boot</span>
-                <span className="px-3 py-1 bg-red-500/20 text-red-400 rounded-full text-xs font-medium border border-red-500/30">Angular</span>
+                <span className="px-3 py-1 bg-emerald-500/20 text-emerald-300 rounded-full text-xs font-medium border border-emerald-500/40">Docker</span>
+                <span className="px-3 py-1 bg-indigo-500/20 text-indigo-300 rounded-full text-xs font-medium border border-indigo-500/40">Kubernetes</span>
+                <span className="px-3 py-1 bg-sky-500/20 text-sky-400 rounded-full text-xs font-medium border border-sky-500/30">GitHub Actions</span>
+                <span className="px-3 py-1 bg-amber-500/20 text-amber-200 rounded-full text-xs font-medium border border-amber-500/40">CI/CD Pipelines</span>
               </div>
             </div>
           </div>

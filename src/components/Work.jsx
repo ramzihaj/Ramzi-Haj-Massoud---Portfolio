@@ -2,6 +2,12 @@ import React from "react";
 import ProjectCard from "./ProjectCard";
 
 const works = [
+   {
+    imgSrc: "images/project-1.jpg",
+    title: "DevSecOps Pipeline Implementation for Tic Tac Toe Game",
+    tags: ["DevSecOps", "Github actions", "ArgoCD","Kubernetes", "Docker"],
+    projectLink: "#",
+  },
   {
     imgSrc: "images/project-1.jpg",
     title: "License Plate Detection System",
@@ -16,13 +22,13 @@ const works = [
   },
   {
     imgSrc: "images/project-3.jpg",
-    title: "Modern Cafe Management System",
+    title: "Cafe Inventory System",
     tags: ["Spring Boot", "Angular", "Management"],
     projectLink: "#",
   },
   {
     imgSrc: "images/project-4.jpg",
-    title: "Furniture E-commerce Tunisia",
+    title: "Modern E-Commerce Platform",
     tags: ["E-commerce", "Full Stack", "Angular"],
     projectLink: "#",
   },

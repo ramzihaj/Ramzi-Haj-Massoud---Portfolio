@@ -9,40 +9,40 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const reviews = [
   {
-    content: 'Exceptional web development! Delivered a seamless, responsive site with clean code and great UX.',
-    name: 'Sophia Ramirez',
+    content: 'Ramzi helped us redesign our CI/CD pipelines and containerise our services. Deployments are now faster and much more reliable.',
+    name: 'Amine Ben Youssef',
     imgSrc: 'images/people-1.jpg',
-    company: 'PixelForge'
+    company: 'Tunis Cloud Solutions'
   },
   {
-    content: 'Impressive work! Fast loading times, intuitive design, and flawless backend integration. Highly recommend.',
-    name: 'Ethan Caldwell',
+    content: 'Great DevOps mindset. He set up Docker, Kubernetes and monitoring for our platform, making incidents easier to detect and resolve.',
+    name: 'Ons Trabelsi',
     imgSrc: 'images/people-2.jpg',
-    company: 'NexaWave'
+    company: 'Carthage Tech Labs'
   },
   {
-    content: 'Outstanding developer! Built a robust site with perfect functionality. Efficient and detail-oriented.',
-    name: 'Liam Bennett',
+    content: 'Professional and pragmatic. Ramzi automated our build and deployment workflow with GitHub Actions and improved our release process.',
+    name: 'Mahdi Gharbi',
     imgSrc: 'images/people-3.jpg',
-    company: 'CodeCraft'
+    company: 'Sfax Digital Factory'
   },
   {
-    content: 'Creative and skilled! Produced a modern, user-friendly site that exceeded expectations. Great communication.',
-    name: 'Noah Williams',
+    content: 'Very smooth collaboration. Clear communication, strong DevOps skills and a real focus on reliability and scalability.',
+    name: 'Sarra Khemiri',
     imgSrc: 'images/people-4.jpg',
-    company: 'BrightWeb'
+    company: 'North Africa Fintech'
   },
   {
-    content: 'Professional work! Delivered on time, with a polished design and smooth user experience. Top-notch developer.',
-    name: 'Ava Thompson',
+    content: 'He migrated our services to containers and optimised our Nginx setup. Performance and observability both improved.',
+    name: 'Yassine Jaziri',
     imgSrc: 'images/people-5.jpg',
-    company: 'TechMosaic'
+    company: 'Tunis Dev Studio'
   },
   {
-    content: 'Excellent project execution! High-quality code, responsive design, and exceptional problem-solving skills.',
-    name: 'Jonathan',
+    content: 'Reliable engineer with strong DevOps practices. Our team now has a stable CI/CD pipeline and a cleaner infrastructure.',
+    name: 'Nour Ben Salem',
     imgSrc: 'images/people-6.jpg',
-    company: 'Skyline Digital'
+    company: 'Maghreb Software Group'
   },
 ];
 

@@ -24,11 +24,10 @@ const About = () => {
           <div className="absolute inset-0 bg-gradient-to-br from-sky-400/5 via-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity duration-500" />
           
           <p className="text-zinc-300 mb-4 md:mb-8 md:text-xl md:max-w-[60ch] relative z-10 leading-relaxed">
-            Welcome! I&apos;m Ramzi, a Full Stack Java Developer specialized 
-            in creating modern and high-performance web applications. 
-            Expert in Spring Boot, Angular, and DevOps technologies (Docker, Kubernetes, CI/CD), 
-            I transform your ideas into robust and scalable digital solutions. 
-            Passionate about innovation and technical excellence.
+            Hi, I&apos;m Ramzi, a DevOps Engineer focused on building reliable CI/CD pipelines,
+            containerised environments with Docker and Kubernetes, and cloud deployment platforms.
+            I automate the application lifecycle from build to production to ensure fast, secure
+            and observable deliveries.
           </p>
           <div className="flex flex-wrap items-center gap-4 md:gap-7 relative z-10">
             {aboutItems.map(({ label, number }, key) => (
